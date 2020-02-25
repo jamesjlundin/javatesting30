@@ -10,9 +10,15 @@ public class MySweetProgram {
 		names.push("Mark");
 		names.push("Sue");
 		names.push("Tim");
-
-		System.out.println(names.poll());
-		System.out.println(names.poll());
-		System.out.println(names.poll());
+		
+		Iterator<String> it = names.iterator();
+		
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
+		
+		for(String s: names) {
+			System.out.println(s);
+		}
 	}
 }
